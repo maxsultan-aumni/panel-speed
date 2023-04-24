@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="page" id="page">
+        <div class="left">
+
+            <ul>
+                <li><button type="button" id="one">one</button></li>
+                <li><button type="button" id="two">two</button></li>
+                <li><button type="button" id="three">three</button></li>
+                <li><button type="button" id="four">four</button></li>
+                <li><button type="button" id="five">five</button></li>
+            </ul>
+            <div class="control-panel">
+                <form oninput="result.value=parseInt(animationSpeed.value) / 1000">
+                    <label for="animation-speed">
+                        Animation Speed: 
+                        <br/>
+                        <output name="result" for="animation-speed">0.1</output> seconds
+                    </label>
+                        <br/>
+                        <input type="range" name="animation-speed" id="animationSpeed" value="100" min="0" max="2000">
+                </form>
+            </div>
+        </div>
+        <div class="panel" id="panel"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

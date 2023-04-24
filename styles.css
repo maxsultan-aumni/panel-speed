@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --animation-time: 100ms
+}
+
+html, body {
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+    background: #e6e6e6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.left {
+    padding: 32px;
+}
+
+.panel{
+    height:100%;
+    background: gray;
+    width: 50%;
+    align-self: end;
+    justify-self: end;
+    transform: translateX(100%);
+}
+
+@keyframes transitionIn {
+    from {
+        transform: translateX(100%);
+      }
+    
+      to {
+        transform: translateX(0%);
+      }
+}
+
+@keyframes transitionOut {
+    from {
+        transform: translateX(0%);
+      }
+    
+      to {
+        transform: translateX(100%);
+      }
+}
+
+.transition-in {
+    animation-name: transitionIn;
+    animation-fill-mode: forwards;
+    animation-duration: var(--animation-time);
+}
+
+.transition-out {
+    animation-name: transitionOut;
+    animation-fill-mode: forwards;
+    animation-duration: var(--animation-time);
+}
